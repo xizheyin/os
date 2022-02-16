@@ -9,3 +9,4 @@
     * [计算机的物理地址空间](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.md)
     * [开机的第一条指令](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/README.md)
       * [一个小实验](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.md)
+      * [开机成功！](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.md)
