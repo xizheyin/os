@@ -15,3 +15,4 @@
     * [写一个自己的MBR](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/README.md)
       * [🥲 操作一波](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.md)
       * [😀 分析一下](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/fen-xi-yi-xia.md)
+    * [加载真正的操作系统](readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong.md)
