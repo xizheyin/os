@@ -1,6 +1,6 @@
 # Table of contents
 
-* [操作系统lab1【如何启动一个OS】](README.md)
+* [😀 操作系统lab1【如何启动一个OS】](README.md)
   * [必备的工具](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/README.md)
     * [了解x86汇编文件](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.md)
     * [QEMU+GDB](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/qemu+gdb.md)
@@ -8,5 +8,10 @@
   * [基础知识](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/README.md)
     * [计算机的物理地址空间](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.md)
     * [开机的第一条指令](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/README.md)
-      * [一个小实验](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.md)
-      * [开机成功！](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.md)
+      * [😇 一个小实验](cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.md)
+      * [😀 了解BIOS](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.md)
+    * [MBR & Bootloader](readme/ji-chu-zhi-shi/mbr-and-bootloader.md)
+  * [开始实验](readme/kai-shi-shi-yan/README.md)
+    * [写一个自己的MBR](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/README.md)
+      * [🥲 操作一波](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.md)
+      * [😀 分析一下](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/fen-xi-yi-xia.md)
