@@ -132,4 +132,4 @@ $qemu-system-i386 mbr.bin
 
 会弹出这样一个窗口
 
-![输出hello world成功](<../../../.gitbook/assets/image (5).png>)
+![输出hello world成功](../../../.gitbook/assets/image8.png)

@@ -29,5 +29,5 @@ readSect函数是将第offset块磁盘读出，读到物理地址为dst的内存
 
 如果你成功加载app，就可以看到下图。恭喜你，成功完成了实验！:tada::tada::tada:
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](../../../.gitbook/assets/image10.png)
 

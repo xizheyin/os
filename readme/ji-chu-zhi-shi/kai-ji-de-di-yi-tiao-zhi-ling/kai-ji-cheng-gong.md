@@ -20,7 +20,7 @@
 \
 
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](../../../.gitbook/assets/image4.png)
 
 ### POST（不必了解）
 

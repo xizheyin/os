@@ -81,7 +81,7 @@ DESCRIPTORS USED FOR APPLICATIONS CODE AND DATA SEGMENTS
 * S：描述符类型标志，S 为 1 表示代码段或数据段，S 为 0 表示系统段(TSS，LDT)和门描述符
 * TYPE：当 S 为 1，TYPE 表示的代码段，数据段的各种属性如下表所示
 
-![TYPE位](<../../../.gitbook/assets/image (4) (1).png>)
+![TYPE位](../../../.gitbook/assets/image7.png)
 
 ### 段选择子如何查找段描述符
 

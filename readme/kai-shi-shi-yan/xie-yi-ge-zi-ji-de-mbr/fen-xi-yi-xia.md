@@ -29,7 +29,7 @@ $objcopy -S -j .text -O binary mbr.elf mbr.bin
 
 实际上，我们发现**elf格式并不是执行代码的必备条件，它可以是exe文件，可以是elf文件，甚至是很原始的bin文件**。
 
-![](../../../.gitbook/assets/image.png)
+![](../../../.gitbook/assets/image9.png)
 
 但是为什么我们常常使用elf格式的文件呢？
 

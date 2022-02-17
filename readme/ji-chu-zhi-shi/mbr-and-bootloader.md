@@ -14,7 +14,7 @@ head -c 512 /dev/sda | hd
 
 
 
-![](<../../.gitbook/assets/image (6).png>)
+![](../../.gitbook/assets/image5.png)
 
 你可以在输出结果的末尾看到魔数 0x55 和 0xaa 。
 

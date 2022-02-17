@@ -49,16 +49,14 @@
 
 ## 补充
 
-你可能会比较疑惑，我们是怎么知道`qemu-system-i386 -s -S os.img`要用这两个参数。其实这个可以通过`man`命令来搜索，输入`man qemu-system-i386`就可以进入到`qemu`的手册里，这里有任何关于`qemu`的知识。输入后，首先进入到下面的界面：
-
-![qemu手册](<../../.gitbook/assets/image (3) (1).png>)
+你可能会比较疑惑，我们是怎么知道`qemu-system-i386 -s -S os.img`要用这两个参数。其实这个可以通过`man`命令来搜索，输入`man qemu-system-i386`就可以进入到`qemu`的手册里，这里有任何关于`qemu`的知识。输入后，首先进入到qemu的手册界面：
 
 然后输入斜杠`/`加上关键词来搜索，比如我想要用`gdb`调试`qemu`上的代码，就输入`/gdb`，敲回车。这时，会显示有`gdb`的内容。输入n查看下一个，输入N查看上一个！然后你就发现有一个什么`-s`参数会开启端口为1234的`gdb server`。它调用了`-gdb`参数，它让`qemu`等待`gdb`的链接。
 
-![搜索"gdb"关键词](<../../.gitbook/assets/image (4) (1) (1).png>)
+![搜索"gdb"关键词](../../.gitbook/assets/image1.png)
 
 这时你会发现，还没等你连上`gdb`，`qemu`就把代码跑完了。所以我们需要一个暂时不让`qemu`启动的选项。搜索关键词`start`，发现`-S`参数可以做到这点。
 
-![-S](<../../.gitbook/assets/image (2).png>)
+![-S](../../.gitbook/assets/image2.png)
 
 好了，齐活！参数找到了，开启qemu，再打开gdb远程连接即可！

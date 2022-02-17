@@ -42,7 +42,7 @@
 
 在经过几次`commit`之后，输入`git log`，我们会看见类似下面这种，其中记录了每个`commit`的**作者**，**提交时间**，以及**你加的那句说明**。`commit`右边那串长长的串是版本号。
 
-![](<../../.gitbook/assets/image (1).png>)
+![](../../.gitbook/assets/image3.png)
 
 这时，如果你想回退到之前的某一个版本，就用`git reset`指令。以上图为例，我想把代码回退到`fix build`对应的版本。只需要输入：
 
