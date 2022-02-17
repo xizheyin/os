@@ -44,20 +44,18 @@
 
 由于跟`GDB`有关的黑科技太多，为了让文档不太长，下面列出一些文档，你们可以参考：
 
-* [(13条消息) GDB入门教程_Dablelv的博客专栏-CSDN博客_gdb菜鸟教程](https://blog.csdn.net/k346k346/article/details/50283861)：这里面有一些比较好用的`GDB`指令，比如查看源码，反汇编等等，请自行查阅相关指令。
+* [(13条消息) GDB入门教程\_Dablelv的博客专栏-CSDN博客\_gdb菜鸟教程](https://blog.csdn.net/k346k346/article/details/50283861)：这里面有一些比较好用的`GDB`指令，比如查看源码，反汇编等等，请自行查阅相关指令。
 * [GDB Documentation (sourceware.org)](https://sourceware.org/gdb/documentation/)：这是GDB官方用户手册，有能力的人可以参考。
-
-
 
 ## 补充
 
 你可能会比较疑惑，我们是怎么知道`qemu-system-i386 -s -S os.img`要用这两个参数。其实这个可以通过`man`命令来搜索，输入`man qemu-system-i386`就可以进入到`qemu`的手册里，这里有任何关于`qemu`的知识。输入后，首先进入到下面的界面：
 
-![qemu手册](<../../.gitbook/assets/image (3).png>)
+![qemu手册](<../../.gitbook/assets/image (3) (1).png>)
 
 然后输入斜杠`/`加上关键词来搜索，比如我想要用`gdb`调试`qemu`上的代码，就输入`/gdb`，敲回车。这时，会显示有`gdb`的内容。输入n查看下一个，输入N查看上一个！然后你就发现有一个什么`-s`参数会开启端口为1234的`gdb server`。它调用了`-gdb`参数，它让`qemu`等待`gdb`的链接。
 
-![搜索"gdb"关键词](<../../.gitbook/assets/image (4).png>)
+![搜索"gdb"关键词](<../../.gitbook/assets/image (4) (1).png>)
 
 这时你会发现，还没等你连上`gdb`，`qemu`就把代码跑完了。所以我们需要一个暂时不让`qemu`启动的选项。搜索关键词`start`，发现`-S`参数可以做到这点。
 
