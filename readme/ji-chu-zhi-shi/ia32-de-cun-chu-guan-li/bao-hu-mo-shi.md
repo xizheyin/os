@@ -78,10 +78,10 @@ DESCRIPTORS USED FOR APPLICATIONS CODE AND DATA SEGMENTS
 * AVL：Available and Reserved Bit，通常设为 0
 * P：存在位，P 为 1 表示段在内存中
 * DPL：描述符特权级，取值 0-3 共 4 级;0 特权级最高，3 特权级最低，表示访问该段时 CPU 所处于的最低特权级，后续实验会详细讨论
-* S：描述符类型标志，S 为 1 表示代码段或数据段，S 为 0 表示系统段(TSS，LDT)和⻔描述符
+* S：描述符类型标志，S 为 1 表示代码段或数据段，S 为 0 表示系统段(TSS，LDT)和门描述符
 * TYPE：当 S 为 1，TYPE 表示的代码段，数据段的各种属性如下表所示
 
-![TYPE位](<../../../.gitbook/assets/image (4).png>)
+![TYPE位](<../../../.gitbook/assets/image (4) (1).png>)
 
 ### 段选择子如何查找段描述符
 

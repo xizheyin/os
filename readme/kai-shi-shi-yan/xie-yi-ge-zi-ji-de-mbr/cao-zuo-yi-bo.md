@@ -94,7 +94,7 @@ $touch genboot.pl
 
 将以下内容保存到文件中
 
-```shell
+```perl
 #!/usr/bin/perl
 open(SIG, $ARGV[0]) || die "open $ARGV[0]: $!";
 $n = sysread(SIG, $buf, 1000);

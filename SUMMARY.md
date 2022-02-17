@@ -15,6 +15,7 @@
       * [☺ 实模式](readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/shi-mo-shi.md)
       * [😭 保护模式](readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.md)
       * [😀 从实模式切换到保护模式](readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/cong-shi-mo-shi-qie-huan-dao-bao-hu-mo-shi.md)
+    * [显存管理](readme/ji-chu-zhi-shi/xian-cun-guan-li.md)
   * [开始实验](readme/kai-shi-shi-yan/README.md)
     * [写一个自己的MBR](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/README.md)
       * [🥲 操作一波](readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.md)
