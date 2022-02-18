@@ -17,9 +17,7 @@ $objcopy -S -j .text -O binary mbr.elf mbr.bin
 
 下面使用的genboot.pl其实是一个脚本程序，虽然我们没学过这种脚本语言，但可以大概看出来，它先打开mbr.bin，然后检查文件是否大于510字节，然后......
 
-{% hint style="info" %}
-exercise7：请观察genboot.pl，说明它在检查文件是否大于510字节之后做了什么，并解释它为什么这么做。
-{% endhint %}
+> exercise5：请观察genboot.pl，说明它在检查文件是否大于510字节之后做了什么，并解释它为什么这么做。
 
 好的，qemu可以成功运行我们这个简易版的mbr了！
 
@@ -27,9 +25,7 @@ exercise7：请观察genboot.pl，说明它在检查文件是否大于510字节�
 
 大家有没有发现，我们并没有使用elf格式的mbr.elf，而是使用了bin格式的mbr.bin？
 
-{% hint style="info" %}
-exercise8：请反汇编mbr.bin，看看它究竟是什么样子。请在报告里说出你看到了什么，并附上截
-{% endhint %}
+> exercise6：请反汇编mbr.bin，看看它究竟是什么样子。请在报告里说出你看到了什么，并附上截图
 
 实际上，我们发现**elf格式并不是执行代码的必备条件，它可以是exe文件，可以是elf文件，甚至是很原始的bin文件**。
 
@@ -43,9 +39,7 @@ exercise8：请反汇编mbr.bin，看看它究竟是什么样子。请在报告�
 
 ### challenge！！！
 
-{% hint style="warning" %}
-challenge1：请尝试使用其他方式，构建自己的MBR，输出“Hello，world!”
-{% endhint %}
+> challenge1：请尝试使用其他方式，构建自己的MBR，输出“Hello，world!”
 
 这是对我们的第一个挑战，目的是帮助大家更深刻的理解MBR是如何执行的。我这里给出几种可能的方法。如果你有自己的方法就更好了！
 

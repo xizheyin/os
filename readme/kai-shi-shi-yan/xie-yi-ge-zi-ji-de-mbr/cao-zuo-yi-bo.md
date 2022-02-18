@@ -11,8 +11,8 @@ $mkdir OS2022
 进入创建好的文件夹，创建一个mbr.s文件
 
 ```shell
-$cd OS2021
-$shetouch mbr.s
+$cd OS2022
+$touch mbr.s
 ```
 
 然后将以下内容保存到 mbr.s 中
