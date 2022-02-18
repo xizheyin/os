@@ -69,7 +69,11 @@ $ls -al
 -rw-r--r-- 1 abc abc 594 2月 15 19:43 mbr.s
 ```
 
-我们发现`mbr.elf`的大小有`3588byte`，这个大小超过了一个扇区，不符合我们的要求
+我们发现`mbr.elf`的大小有`3588byte`，这个大小超过了一个扇区，不符合我们的要求。
+
+{% hint style="info" %}
+exercise6：假设mbr.elf的文件大小是300byte，那我是否可以直接执行qemu-system-i386 mbr.elf这条命令？为什么？
+{% endhint %}
 
 > 不管是i386还是i386之前的芯片，在加电后的第一条指令都是跳转到BIOS固件进行开机自检，然 后将磁盘的主引导扇区（Master Boot Record, MBR ；0号柱面，0号磁头，0号扇区对应的扇区， 512字节，末尾两字节为魔数 0x55 和 0xaa ）加载到0x7c00。
 
