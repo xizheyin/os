@@ -17,7 +17,9 @@ $objcopy -S -j .text -O binary mbr.elf mbr.bin
 
 下面使用的genboot.pl其实是一个脚本程序，虽然我们没学过这种脚本语言，但可以大概看出来，它先打开mbr.bin，然后检查文件是否大于510字节，然后......
 
-> exercise5：请观察genboot.pl，说明它在检查文件是否大于510字节之后做了什么，并解释它为什么这么做。
+{% hint style="info" %}
+exercise7：请观察genboot.pl，说明它在检查文件是否大于510字节之后做了什么，并解释它为什么这么做。
+{% endhint %}
 
 好的，qemu可以成功运行我们这个简易版的mbr了！
 
@@ -25,7 +27,9 @@ $objcopy -S -j .text -O binary mbr.elf mbr.bin
 
 大家有没有发现，我们并没有使用elf格式的mbr.elf，而是使用了bin格式的mbr.bin？
 
-> exercise6：请反汇编mbr.bin，看看它究竟是什么样子。请在报告里说出你看到了什么，并附上截图
+{% hint style="info" %}
+exercise8：请反汇编mbr.bin，看看它究竟是什么样子。请在报告里说出你看到了什么，并附上截
+{% endhint %}
 
 实际上，我们发现**elf格式并不是执行代码的必备条件，它可以是exe文件，可以是elf文件，甚至是很原始的bin文件**。
 
@@ -39,22 +43,27 @@ $objcopy -S -j .text -O binary mbr.elf mbr.bin
 
 ### challenge！！！
 
-> challenge1：请尝试使用其他方式，构建自己的MBR，输出“Hello，world!”
+{% hint style="warning" %}
+challenge1：请尝试使用其他方式，构建自己的MBR，输出“Hello，world!”
+{% endhint %}
 
 这是对我们的第一个挑战，目的是帮助大家更深刻的理解MBR是如何执行的。我这里给出几种可能的方法。如果你有自己的方法就更好了！
 
 
 
-* 第一种（简单）：还是使用我们提供的汇编语言，通过编写一段`C`语言或者`Python`代码来代替`genboot.pl`文件，来生成符合`mbr`格式的`mbr.bin`
-* 第二种（进阶）：使用`C`语言或`Python`自己解析`elf`文件格式，来代替`objcopy`和`genboot.pl`，来生成符合`mbr`格式的`mbr.bin`
+* 第一种（基础）：还是使用我们提供的汇编语言，通过编写一段`C`语言或者`Python`代码来代替`genboot.pl`文件，来生成符合`mbr`格式的`mbr.bin`
+* 第二种（基础）：使用`C`语言或`Python`自己解析`elf`文件格式，来代替`objcopy`和`genboot.pl`，来生成符合`mbr`格式的`mbr.bin`
 * 第三种（进阶）：直接使用汇编语言编写代码（在汇编文件里面编写指令填充剩余字节和添加魔数），通过`nasm`编译器直接编译成512字节的`mbr.bin`
+* 第四种（困难）：像上一节一样，编写汇编代码，但用nasm编译成其他目标格式（如exe，macho32等），最后抽取出代码部分！
 * 你自己的想法...
 
-我们鼓励你去尝试高难度的操作，但是为了避免卷怪，以上方法任选一种去实现就好了，并且要**在实验报告里面说明你选择的方法是什么，和如何实现的（并在challenge文件夹里面附上你的代码）**。
-
-
+我们鼓励你去尝试高难度的操作，但是为了避免卷怪，以上方法任选一种去实现就好了（分数几乎不会有差别），并且要**在实验报告里面说明你选择的方法是什么，和如何实现的（并在challenge文件夹里面附上你的代码）**。
 
 ### 补充材料
+
+gcc输出的可执行文件格式都是Unix传统的ELF格式，而nasm编译器可以输出多种目标格式（比如我们熟知的windows对应的exe，macos对应的macho32，原始的bin文件...）。
+
+上面第三种思路的同学可以直接把汇编代码编译成512字节的bin格式，第四种思路的同学可以先编译成任意其他格式，再通过某种办法从中把可执行代码抽取出来...
 
 对于选择第三种思路的同学，这里提供nasm汇编的资料：[https://asmtutor.com/#top](https://asmtutor.com/#top)
 
