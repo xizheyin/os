@@ -61,4 +61,4 @@ $ qemu-system-i386 os.img      #运行os.img
 
 ![-S](../../.gitbook/assets/image2.png)
 
-好了，齐活！参数找到了，开启qemu，再打开gdb远程连接即可！
+好了，参数找到了，开启qemu，再打开gdb远程连接即可！
