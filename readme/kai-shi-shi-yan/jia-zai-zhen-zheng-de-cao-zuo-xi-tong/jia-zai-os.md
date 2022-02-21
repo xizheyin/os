@@ -47,3 +47,9 @@ exercise12：如果把app读到0x7c20，再跳转到这个地方可以吗？为�
 如果你成功加载app，就可以看到下图。恭喜你，成功完成了实验！:tada::tada::tada:
 
 ![成功了](../../../.gitbook/assets/image10.png)
+
+{% hint style="info" %}
+exercise13：最终的问题，请简述电脑从加电开始，到OS开始执行为止，计算机是如何运行的。
+
+不用太详细，把每一部分是做什么的说清楚就好了。
+{% endhint %}
