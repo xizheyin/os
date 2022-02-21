@@ -1,6 +1,6 @@
 # Table of contents
 
-* [😀 操作系统lab1【如何启动一个OS】](README.md)
+* [操作系统lab1【如何启动一个OS】](README.md)
   * [必备的工具](readme/bi-bei-de-gong-ju/README.md)
     * [了解x86汇编文件](readme/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.md)
     * [QEMU+GDB](readme/bi-bei-de-gong-ju/qemu+gdb.md)
@@ -8,8 +8,8 @@
   * [基础知识](readme/ji-chu-zhi-shi/README.md)
     * [计算机的物理地址空间](readme/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.md)
     * [开机的第一条指令](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/README.md)
-      * [😇 一个小实验](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.md)
-      * [😀 了解BIOS](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.md)
+      * [一个小实验](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.md)
+      * [了解BIOS](readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.md)
     * [MBR & Bootloader](readme/ji-chu-zhi-shi/mbr-and-bootloader.md)
     * [IA-32的存储管理](readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/README.md)
       * [☺ 实模式](readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/shi-mo-shi.md)

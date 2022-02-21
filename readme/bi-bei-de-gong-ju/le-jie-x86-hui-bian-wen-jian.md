@@ -1,6 +1,6 @@
 # 了解x86汇编文件
 
-~~好，下面让我们看官方手册学习汇编：~~[~~PC Assembly Lanugage (mit.edu)~~](https://pdos.csail.mit.edu/6.828/2018/readings/pcasm-book.pdf)~~。~~
+~~好，下面让我们看官方手册学习汇编：~~[~~PC Assembly Language (mit.edu)~~](https://pdos.csail.mit.edu/6.828/2018/readings/pcasm-book.pdf)~~。~~
 
 哈哈，开玩笑的！实际上都是些上学期学的比较基础的指令。
 
@@ -60,7 +60,7 @@ collect2: error: ld returned 1 exit status
 
 这就是我们这个简单的汇编程序执行的全过程。那么借助这个程序，我来解释几个关键的符号：
 
-* 通过一个“点"开头的东西比如`.section`和`.data`叫做汇编语言地**伪指令**，用来指导汇编器进行布局和汇编。
+* 通过一个“点"开头的东西比如`.section`和`.data`叫做汇编语言的**伪指令**，用来指导汇编器进行布局和汇编。
 * `.section`把这个程序划分为不同的段（`section`），比如代码段，数据段，相信大家都了解。
 * `.data`是声明一个**可读可写数据段**，存放的数据比如全局变量。（在这个代码中，没有全局变量，所以是空的！）
 * `.text`段是声明一个**代码段**，不可以写，只可以读和执行，程序的代码部分在这个段里
@@ -70,5 +70,5 @@ collect2: error: ld returned 1 exit status
 
 这个是`GCC`官网，我们可以查阅相关内容（全英文有点难，可以挑战一下自己。）还可以通过`man gcc`或者`gcc --help`来学习。
 
-下面推荐另外一套工具链：[https://asmtutor.com/#top\
+下面推荐另外一套工具链：[https://asmtutor.com/#top\
 ](https://asmtutor.com/#top)
