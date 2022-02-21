@@ -18,8 +18,9 @@
 利用`QEMU`模拟80386平台，运行自制的操作系统镜像`os.img`
 
 ```shell
- $ make
- $ qemu-system-i386 os.img
+$ chmod +x ./utils/genboot.pl  #给予genboot.pl权限，为什么暂时不用管，后面章节会解释
+$ make                         #生成os.img
+$ qemu-system-i386 os.img      #运行os.img
 ```
 
 利用`QEMU`模拟80386平台，`Debug`自制的操作系统镜像`os.img`，选项 `-s` 在`TCP`的1234端口运行一个 `gdbserver`（不用懂，反正就是`QEMU`会把在其上运行的操作系统的执行信息发送给`GDB`），选项 `-S` 使得`QEMU`启动时不运行80386的`CPU`。
