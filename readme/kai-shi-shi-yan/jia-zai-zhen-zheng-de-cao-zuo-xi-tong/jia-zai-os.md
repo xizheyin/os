@@ -17,11 +17,17 @@ task2：以下任务点是在本节需要完成的
 
 ### 切换到本节实验
 
+{% hint style="danger" %}
+切换前请commit把task1的代码提交！！！
+{% endhint %}
+
 请在完成[《开启保护模式》](kai-qi-bao-hu-mo-shi.md)之后，在实验根目录命令行里输入，切换到本节的分支：
 
 ```
 git checkout load-os
 ```
+
+
 
 ### 框架理解
 
