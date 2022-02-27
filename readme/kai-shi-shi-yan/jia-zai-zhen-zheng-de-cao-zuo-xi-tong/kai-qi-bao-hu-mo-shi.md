@@ -46,7 +46,8 @@ task1：以下任务点是我们在本节需要完成的（代码中已通过TOD
   * 思路：可以借助eax作为中转寄存器，先把cr0存入eax，然后把eax最低位置为1，最后存回cr0
   * 当然，如果有自己的思路更好
 * 填写GDT
-  * GDT的第一个描述符都是0，请自行搜索为什么
+  * GDT的第一个描述符都是0，请自行搜索为什么。
+  * base和limit的大小请参考Linux的实现。
   * 请先思考，**为什么我要把三个段描述符按照cs，ds，gs的顺序排列？（Hint：结合汇编代码，看看段选择子是多少**[#duan-xuan-ze-zi-ru-he-cha-zhao-duan-miao-shu-fu](../../ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.md#duan-xuan-ze-zi-ru-he-cha-zhao-duan-miao-shu-fu "mention")**）**
   * 在注释里我已经把公式给出，请结合[#gdt](../../ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.md#gdt "mention")来填写它。
 * 输出helloworld
