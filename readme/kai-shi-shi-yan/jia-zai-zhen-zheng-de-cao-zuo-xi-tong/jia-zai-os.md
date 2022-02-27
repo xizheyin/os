@@ -6,25 +6,25 @@ description: 这部分只要写两行代码
 
 ### 实验任务
 
-我们最后一步，是加载app（即OS）
+我们最后一步，是加载app（即OS）。
 
 {% hint style="info" %}
-task2：以下任务点是在本节需要完成的
+task2：以下任务点是在本节需要完成的：
 
-* [x] 把上一节保护模式部分搬过来
-* [x] 填写bootMain函数
+* [x] 把上一节保护模式部分搬过来。
+* [x] 填写bootMain函数。
 {% endhint %}
 
 ### 切换到本节实验
 
 {% hint style="danger" %}
-切换前请commit把task1的代码提交！！！
+切换前请commit来把task1的代码提交！！！
 {% endhint %}
 
 请在完成[《开启保护模式》](kai-qi-bao-hu-mo-shi.md)之后，在实验根目录命令行里输入，切换到本节的分支：
 
 ```
-git checkout load-os
+$ git checkout load-os
 ```
 
 

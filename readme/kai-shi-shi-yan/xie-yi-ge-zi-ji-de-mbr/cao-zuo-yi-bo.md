@@ -2,20 +2,20 @@
 
 ### 一系列操作
 
-在配置好实验环境之后，先建立一个操作系统实验文件夹存放本实验代码
+在配置好实验环境之后，先建立一个操作系统实验文件夹存放本实验代码：
 
 ```shell
 $mkdir OS2022
 ```
 
-进入创建好的文件夹，创建一个mbr.s文件
+进入创建好的文件夹，创建一个mbr.s文件：
 
 ```shell
 $cd OS2022
 $touch mbr.s
 ```
 
-然后将以下内容保存到 mbr.s 中
+然后将以下内容保存到 mbr.s 中：
 
 ```shell
 .code16
@@ -26,10 +26,10 @@ movw %ax, %ds
 movw %ax, %es
 movw %ax, %ss
 movw $0x7d00, %ax
-movw %ax, %sp # setting stack pointer to 0x7d00
-pushw $13 # pushing the size to print into stack
-pushw $message # pushing the address of message into stack
-callw displayStr # calling the display function
+movw %ax, %sp         # setting stack pointer to 0x7d00
+pushw $13             # pushing the size to print into stack
+pushw $message        # pushing the address of message into stack
+callw displayStr      # calling the display function
 loop:
 jmp loop
 message:
@@ -47,19 +47,19 @@ popw %bp
 ret
 ```
 
-接下来使用gcc编译得到的mbr.s文件
+接下来使用gcc编译得到mbr.s文件：
 
 ```shell
 $gcc -c -m32 mbr.s -o mbr.o
 ```
 
-文件夹下会多一个mbr.o的文件，接下来使用ld进行链接
+文件夹下会多一个mbr.o的文件，接下来使用ld进行链接：
 
 ```shell
 $ld -m elf_i386 -e start -Ttext 0x7c00 mbr.o -o mbr.elf
 ```
 
-我们会得到mbr.elf文件，查看一下属性
+我们会得到mbr.elf文件，查看一下属性。
 
 ```shell
 $ls -al
@@ -77,16 +77,16 @@ exercise6：假设mbr.elf的文件大小是300byte，那我是否可以直接执
 
 > 不管是i386还是i386之前的芯片，在加电后的第一条指令都是跳转到BIOS固件进行开机自检，然 后将磁盘的主引导扇区（Master Boot Record, MBR ；0号柱面，0号磁头，0号扇区对应的扇区， 512字节，末尾两字节为魔数 0x55 和 0xaa ）加载到0x7c00。
 
-所以我们使用objcopy命令尽量减少mbr程序的大小
+所以我们使用objcopy命令尽量减少mbr程序的大小：
 
 ```shell
-$objcopy -S -j .text -O binary mbr.elf mbr.bin
+$ objcopy -S -j .text -O binary mbr.elf mbr.bin
 ```
 
-再查看，发现mbr.bin的大小小于一个扇区
+再查看，发现mbr.bin的大小小于一个扇区。
 
 ```shell
-$ls -al mbr.bin
+$ ls -al mbr.bin
 -rwxr-xr-x 1 kingxu kingxu 65 2月 15 20:03 mbr.bin
 ```
 
