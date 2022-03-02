@@ -2,7 +2,7 @@
 
 机器刚刚启动的时候，物理内存是按照下面这样划分的：
 
-![](broken-reference)
+![物理内存](../../.gitbook/assets/image0.png)
 
 第一代`PC`基于16位`Intel 8088`处理器，只能寻址1MB的物理内存。所以早期PC的物理地址空间将从`0x00000000`开始，到`0x000FFFFF`结束，而不是`0xFFFFFFFF`（32位）。标记为`Low Memory`的`640KB`空间是早期PC能够使用的唯一随机访问内存（`RAM`）。
 
