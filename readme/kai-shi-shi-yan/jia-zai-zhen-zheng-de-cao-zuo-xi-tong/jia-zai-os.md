@@ -27,8 +27,6 @@ task2：以下任务点是在本节需要完成的：
 $ git checkout load-os
 ```
 
-
-
 ### 框架理解
 
 boot.c里面的bootMain函数的作用有如下两个：
@@ -39,7 +37,7 @@ boot.c里面的bootMain函数的作用有如下两个：
 readSect函数是将第offset块磁盘读出，读到物理地址为dst的内存中。
 
 {% hint style="info" %}
-exercise11：请阅读项目里的3个Makefile，解释一下根目录的Makefile文件里
+exercise13：请阅读项目里的3个Makefile，解释一下根目录的Makefile文件里
 
 &#x20;                 cat bootloader/bootloader.bin app/app.bin > os.img
 
@@ -47,7 +45,7 @@ exercise11：请阅读项目里的3个Makefile，解释一下根目录的Makefil
 {% endhint %}
 
 {% hint style="info" %}
-exercise12：如果把app读到0x7c20，再跳转到这个地方可以吗？为什么？
+exercise14：如果把app读到0x7c20，再跳转到这个地方可以吗？为什么？
 {% endhint %}
 
 如果你成功加载app，就可以看到下图。恭喜你，成功完成了实验！:tada::tada::tada:
@@ -55,7 +53,7 @@ exercise12：如果把app读到0x7c20，再跳转到这个地方可以吗？为�
 ![成功了](../../../.gitbook/assets/image10.png)
 
 {% hint style="info" %}
-exercise13：最终的问题，请简述电脑从加电开始，到OS开始执行为止，计算机是如何运行的。
+exercise15：最终的问题，请简述电脑从加电开始，到OS开始执行为止，计算机是如何运行的。
 
 不用太详细，把每一部分是做什么的说清楚就好了。
 {% endhint %}

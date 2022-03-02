@@ -11,14 +11,16 @@ $ld -m elf_i386 -e start -Ttext 0x7c00 mbr.o -o mbr.elf
 $objcopy -S -j .text -O binary mbr.elf mbr.bin
 ```
 
-> exercise4：面对这两条指令，我们可能摸不着头脑，手册前面...... 所以请通过之前教程教的内容，说明上面两条指令是什么意思。（即解释参数的含义）
+{% hint style="info" %}
+exercise8：面对这两条指令，我们可能摸不着头脑，手册前面...... 所以请通过之前教程教的内容，说明上面两条指令是什么意思。（即解释参数的含义）
+{% endhint %}
 
 在执行这两段命令之后，我们发现`mbr.bin`的大小为65字节，远远少于之前的3k多。
 
 下面使用的genboot.pl其实是一个脚本程序，虽然我们没学过这种脚本语言，但可以大概看出来，它先打开mbr.bin，然后检查文件是否大于510字节，然后......
 
 {% hint style="info" %}
-exercise7：请观察genboot.pl，说明它在检查文件是否大于510字节之后做了什么，并解释它为什么这么做。
+exercise9：请观察genboot.pl，说明它在检查文件是否大于510字节之后做了什么，并解释它为什么这么做。
 {% endhint %}
 
 好的，qemu可以成功运行我们这个简易版的mbr了！
@@ -28,7 +30,7 @@ exercise7：请观察genboot.pl，说明它在检查文件是否大于510字节�
 大家有没有发现，我们并没有使用elf格式的mbr.elf，而是使用了bin格式的mbr.bin？
 
 {% hint style="info" %}
-exercise8：请反汇编mbr.bin，看看它究竟是什么样子。请在报告里说出你看到了什么，并附上截图
+exercise10：请反汇编mbr.bin，看看它究竟是什么样子。请在报告里说出你看到了什么，并附上截图
 {% endhint %}
 
 实际上，我们发现**elf格式并不是执行代码的必备条件，它可以是exe文件，可以是elf文件，甚至是很原始的bin文件**。

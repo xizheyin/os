@@ -54,9 +54,9 @@ task1：以下任务点是我们在本节需要完成的（代码中已通过TOD
   * 这个提示的已经太明显了:joy:
 
 {% hint style="info" %}
-exercise9：请回答为什么三个段描述符要按照cs，ds，gs的顺序排列？
+exercise11：请回答为什么三个段描述符要按照cs，ds，gs的顺序排列？
 {% endhint %}
 
 {% hint style="info" %}
-exercise10：请回答app.s是怎么利用显存显示helloworld的。
+exercise12：请回答app.s是怎么利用显存显示helloworld的。
 {% endhint %}

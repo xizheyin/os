@@ -17,7 +17,7 @@ $ make qemu-gdb
 然后在实验根目录再打开一个终端，输入`make gdb`，观察一下。
 
 {% hint style="info" %}
-exercise1：根据你看到的，回答下面问题
+exercise2：根据你看到的，回答下面问题
 
 我们从看见的那条指令可以推断出几点：
 
@@ -47,5 +47,5 @@ exercise1：根据你看到的，回答下面问题
 `0xffff0`是`BIOS`结束前16个字节(`0x100000`)。在第一条指令的后面只有16个字节，啥也干不了。所以，......
 
 {% hint style="info" %}
-exercise2：请翻阅根目录下的`makefile`文件，简述`make qemu-nox-gdb`和`make gdb`是怎么运行的（`.gdbinit`是`gdb`初始化文件，了解即可）
+exercise3：请翻阅根目录下的`makefile`文件，简述`make qemu-nox-gdb`和`make gdb`是怎么运行的（`.gdbinit`是`gdb`初始化文件，了解即可）
 {% endhint %}
