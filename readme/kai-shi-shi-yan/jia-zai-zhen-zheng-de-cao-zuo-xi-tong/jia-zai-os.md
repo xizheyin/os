@@ -6,7 +6,7 @@ description: 这部分只要写两行代码
 
 ### 实验任务
 
-我们最后一步，是加载app（即OS）。
+我们最后一步，是加载app（即OS） 。
 
 {% hint style="info" %}
 task2：以下任务点是在本节需要完成的：
