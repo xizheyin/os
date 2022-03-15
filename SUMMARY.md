@@ -23,3 +23,5 @@
     * [加载真正的操作系统](readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/README.md)
       * [🧐 开启保护模式](readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/kai-qi-bao-hu-mo-shi.md)
       * [🤓 加载“OS”](readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/jia-zai-os.md)
+* [😁 操作系统lab2【】](cao-zuo-xi-tong-lab2/README.md)
+  * [操作系统lab2](cao-zuo-xi-tong-lab2/cao-zuo-xi-tong-lab2.md)
