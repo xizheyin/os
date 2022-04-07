@@ -119,13 +119,12 @@ N  S      |   SLEEPTIME   |                  |   SLEEPTIME   |
 
 irqHandle里面有一个很奇妙的处理（暂时不用管）：
 
-```
+```c
 void irqHandle(struct StackFrame *sf) { // pointer sf = esp
 	/* Reassign segment register */
 	asm volatile("movw %%ax, %%ds"::"a"(KSEL(SEG_KDATA)));
-	/*TODO Save esp to stackTop */
-	uint32_t tmpStackTop=pcb[current].stackTop;
-	pcb[current].prevStackTop=pcb[current].stackTop;
+	
+	/* Save esp to stackTop 为了中断嵌套 */
 	pcb[current].stackTop=(uint32_t)sf;
 
 	switch(sf->irq) {
@@ -142,8 +141,6 @@ void irqHandle(struct StackFrame *sf) { // pointer sf = esp
 			break;
 		default:assert(0);
 	}
-	/*TODO Recover stackTop */
-	pcb[current].stackTop=tmpStackTop;
 }
 ```
 
@@ -156,7 +153,6 @@ void irqHandle(struct StackFrame *sf) { // pointer sf = esp
 ```
 	// user process
 	pcb[1].stackTop = (uint32_t)&(pcb[1].regs);
-	pcb[1].prevStackTop = (uint32_t)&(pcb[1].stackTop);
 	pcb[1].state = STATE_RUNNABLE;
 	pcb[1].timeCount = 0;
 ```
@@ -164,32 +160,32 @@ void irqHandle(struct StackFrame *sf) { // pointer sf = esp
 这一系列迷惑操作...究竟是啥玩意？我们通过查看pcb的结构，可以看出来：
 
 {% hint style="info" %}
-exercise5：stackTop和prevStackTop分别是什么值？
+exercise5：stackTop有什么用？为什么一些地方要取地址赋值给stackTop？
 {% endhint %}
 
 如果一时半会想不出答案。可以继续往下看，下面提供一个进程切换代码（可以直接用在实验里）：
 
+```c
+		//switch process
+		uint32_t tmpStackTop=pcb[current].stackTop;
+		tss.esp0=(uint32_t)&(pcb[current].stackTop);
+		asm volatile("movl %0,%%esp"::"m"(tmpStackTop));
+		asm volatile("popl %gs");
+		asm volatile("popl %fs");
+		asm volatile("popl %es");
+		asm volatile("popl %ds");
+		asm volatile("popal");
+		asm volatile("addl $8,%esp");
+		asm volatile("iret");
 ```
-tmpStackTop = pcb[current].stackTop;
-pcb[current].stackTop = pcb[current].prevStackTop;
-tss.esp0 = (uint32_t)&(pcb[current].stackTop);
-asm volatile("movl %0, %%esp"::"m"(tmpStackTop)); // switch kernel stack
-asm volatile("popl %gs");
-asm volatile("popl %fs");
-asm volatile("popl %es");
-asm volatile("popl %ds");
-asm volatile("popal");
-asm volatile("addl $8, %esp");
-asm volatile("iret");
-```
 
-emmm......把进程控制块的stackTop赋值给了esp，然后一番pop操作，然后iret...好像和陷入中断是返过来的，那么我们会发现，实际上stackTop就是......
+emmm......把进程控制块的stackTop赋值给了esp，然后一番pop操作，然后iret...好像和陷入中断是反过来的，那么我们会发现，实际上stackTop就是......
 
-反正经过这样一番操作，我们**旧进程**的各种状态是什么样的呢？
+这样一番操作有什么用呢？
 
-答：（现在去看irqHandle里面看）旧进程对应内核栈里当然是有一个完整的stackframe（注意，stackframe里面装的是**用户级别**的程序状态，每个用户进程只有这一个！！！），并且PCB里面的stackTop等于StackFrame的基地址，prevstackTop等于StackFrame被全部pop出去之后的esp大小，是不是和我initProc初始化时候设置的一致！！！
+首先把esp切换到即将运行的进程的内核栈顶（栈顶指着最近的一个stackframe），然后把esp0进行清空。（注意：只有在嵌套的中断形成的stackframe一层层pop出栈，直到清空到最外面一层之后，才会切换到用户态。如果在中断嵌套的情况下，我们是不用管tss.esp0的。）**这样，我们就可以iret返回上一层中断，或者返回到用户态。**
 
-通过这样，我们就可以进行用户进程间的切换，保证旧进程的状态可以得到保存，新进程得以运行。
+其实这个道理和函数调用返回是一样的，请思考一下。
 
 ## 中断嵌套
 
@@ -200,7 +196,7 @@ irqHandle里面的一些迷惑操作（save esp之类的）是为什么呢？
 实际上是为了中断嵌套，中断嵌套本质上就是从一个用户进程的内核态进入内核态，然后嵌套的一些状态信息会不断保存在对应的内核栈里......下面需要你自己理解了。
 
 {% hint style="info" %}
-exercise6：请说说在中断嵌套发生时，系统是如何运行的？
+exercise6：请说说在中断嵌套发生时，系统是如何运行的？（把关键的地方说一下即可，简答）
 {% endhint %}
 
 ### 临界区问题（拓展）
@@ -214,7 +210,7 @@ exercise6：请说说在中断嵌套发生时，系统是如何运行的？
 * 从进程P2的内核堆栈中弹出P2的现场信息，从时间中断处理程序返回执行P2。
 * 进程P2在内核态处理系统调用，处理视频显存，与进程P1形成竞争。
 
-多个进程并发地进行系统调用，对共享资源进行竞争可能会产生一致性问题，带来未知的BUG；**因此， 在系统调用过程中，对于临界区的代码不宜开启外部硬件中断，而对于非临界区的代码，则可以开启外 部硬件中断，允许中断嵌套。**
+多个进程并发地进行系统调用，对共享资源进行竞争可能会产生一致性问题，带来未知的BUG；**因此， 在系统调用过程中，对于临界区的代码不宜开启外部硬件中断，而对于非临界区的代码，则可以开启外部硬件中断，允许中断嵌套。**
 
 ## 调度策略
 
