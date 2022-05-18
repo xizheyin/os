@@ -19,4 +19,4 @@ description: 重头戏来了！
 
 下面是一个黑科技，实验结束可以研究一下：
 
-[C 如何编译出一个不需要操作系统的程序？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/49580321/answer/287557834?ADUIN=1263522794\&ADSESSION=1645021658\&ADTAG=CLIENT.QQ.5845\_.0\&ADPUBNO=27178)
+[C 如何编译出一个不需要操作系统的程序？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/49580321/answer/287557834?utm\_source=qq\&utm\_medium=social\&utm\_oi=832323438948544512\&ADUIN=1263522794\&ADSESSION=1645021658\&ADTAG=CLIENT.QQ.5845\_.0\&ADPUBNO=27178)
