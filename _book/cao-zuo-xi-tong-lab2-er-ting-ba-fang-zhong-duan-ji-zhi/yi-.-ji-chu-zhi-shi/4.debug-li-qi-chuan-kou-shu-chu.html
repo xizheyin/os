@@ -1,0 +1,1445 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.Debug利器-串口输出 · lab manual for OS 2022 spring</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yxz">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../er-.-kai-shi-coding/" />
+    
+    
+    <link rel="prev" href="3.-zhong-duan/xi-tong-tiao-yong.html" />
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    😀 操作系统lab1【呱呱坠地-OS引导】
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../readme/bi-bei-de-gong-ju/">
+            
+                <a href="../../readme/bi-bei-de-gong-ju/">
+            
+                    
+                    必备的工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../readme/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.html">
+            
+                <a href="../../readme/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.html">
+            
+                    
+                    了解x86汇编文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../readme/bi-bei-de-gong-ju/qemu+gdb.html">
+            
+                <a href="../../readme/bi-bei-de-gong-ju/qemu+gdb.html">
+            
+                    
+                    QEMU+GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../readme/bi-bei-de-gong-ju/git-guan-li-xiang-mu.html">
+            
+                <a href="../../readme/bi-bei-de-gong-ju/git-guan-li-xiang-mu.html">
+            
+                    
+                    Git管理项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../readme/ji-chu-zhi-shi/">
+            
+                <a href="../../readme/ji-chu-zhi-shi/">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../readme/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.html">
+            
+                    
+                    计算机的物理地址空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/">
+            
+                <a href="../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/">
+            
+                    
+                    开机的第一条指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.2.1" data-path="../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.html">
+            
+                    
+                    😇 一个小实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2.2" data-path="../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.html">
+            
+                    
+                    😀 了解BIOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../readme/ji-chu-zhi-shi/mbr-and-bootloader.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/mbr-and-bootloader.html">
+            
+                    
+                    MBR & Bootloader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/">
+            
+                <a href="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/">
+            
+                    
+                    IA-32的存储管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.4.1" data-path="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/shi-mo-shi.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/shi-mo-shi.html">
+            
+                    
+                    ☺ 实模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4.2" data-path="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.html">
+            
+                    
+                    😭 保护模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4.3" data-path="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/cong-shi-mo-shi-qie-huan-dao-bao-hu-mo-shi.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/cong-shi-mo-shi-qie-huan-dao-bao-hu-mo-shi.html">
+            
+                    
+                    😀 从实模式切换到保护模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../readme/ji-chu-zhi-shi/xian-cun-guan-li.html">
+            
+                <a href="../../readme/ji-chu-zhi-shi/xian-cun-guan-li.html">
+            
+                    
+                    显存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../readme/kai-shi-shi-yan/">
+            
+                <a href="../../readme/kai-shi-shi-yan/">
+            
+                    
+                    开始实验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/">
+            
+                <a href="../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/">
+            
+                    
+                    写一个自己的MBR
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1.1" data-path="../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.html">
+            
+                <a href="../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.html">
+            
+                    
+                    🥲 操作一波
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.1.2" data-path="../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/fen-xi-yi-xia.html">
+            
+                <a href="../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/fen-xi-yi-xia.html">
+            
+                    
+                    😀 分析一下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/">
+            
+                <a href="../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/">
+            
+                    
+                    加载真正的操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.2.1" data-path="../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/kai-qi-bao-hu-mo-shi.html">
+            
+                <a href="../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/kai-qi-bao-hu-mo-shi.html">
+            
+                    
+                    🧐 开启保护模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2.2" data-path="../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/jia-zai-os.html">
+            
+                <a href="../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/jia-zai-os.html">
+            
+                    
+                    🤓 加载“OS”
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    😆 操作系统lab2【耳听八方-中断机制】
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    一.基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="1.-jia-zai-kernel-he-yong-hu-cheng-xu/">
+            
+                <a href="1.-jia-zai-kernel-he-yong-hu-cheng-xu/">
+            
+                    
+                    1.加载Kernel和用户程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1.1" data-path="1.-jia-zai-kernel-he-yong-hu-cheng-xu/ci-pan-du-xie.html">
+            
+                <a href="1.-jia-zai-kernel-he-yong-hu-cheng-xu/ci-pan-du-xie.html">
+            
+                    
+                    磁盘读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.2" data-path="1.-jia-zai-kernel-he-yong-hu-cheng-xu/jia-zai-elf.html">
+            
+                <a href="1.-jia-zai-kernel-he-yong-hu-cheng-xu/jia-zai-elf.html">
+            
+                    
+                    加载ELF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="2.-nei-he-tai-yong-hu-tai/">
+            
+                <a href="2.-nei-he-tai-yong-hu-tai/">
+            
+                    
+                    2.内核态-用户态
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.2.1" data-path="2.-nei-he-tai-yong-hu-tai/te-quan-ji.html">
+            
+                <a href="2.-nei-he-tai-yong-hu-tai/te-quan-ji.html">
+            
+                    
+                    特权级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="3.-zhong-duan/">
+            
+                <a href="3.-zhong-duan/">
+            
+                    
+                    3.中断
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.1" data-path="3.-zhong-duan/wai-bu-zhong-duan.html">
+            
+                <a href="3.-zhong-duan/wai-bu-zhong-duan.html">
+            
+                    
+                    外部中断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.2" data-path="3.-zhong-duan/ia32-zhong-duan-ji-zhi/">
+            
+                <a href="3.-zhong-duan/ia32-zhong-duan-ji-zhi/">
+            
+                    
+                    IA-32中断机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.3.2.1" data-path="3.-zhong-duan/ia32-zhong-duan-ji-zhi/idt-zhong-duan-miao-shu-fu-biao.html">
+            
+                <a href="3.-zhong-duan/ia32-zhong-duan-ji-zhi/idt-zhong-duan-miao-shu-fu-biao.html">
+            
+                    
+                    IDT（中断描述符表）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.2.2" data-path="3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-xiang-liang.html">
+            
+                <a href="3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-xiang-liang.html">
+            
+                    
+                    中断向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.2.3" data-path="3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-shi-de-qie-huan.html">
+            
+                <a href="3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-shi-de-qie-huan.html">
+            
+                    
+                    中断时的切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3.3" data-path="3.-zhong-duan/xi-tong-tiao-yong.html">
+            
+                <a href="3.-zhong-duan/xi-tong-tiao-yong.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.4" data-path="4.debug-li-qi-chuan-kou-shu-chu.html">
+            
+                <a href="4.debug-li-qi-chuan-kou-shu-chu.html">
+            
+                    
+                    4.Debug利器-串口输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../er-.-kai-shi-coding/">
+            
+                <a href="../er-.-kai-shi-coding/">
+            
+                    
+                    二.开始Coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.html">
+            
+                <a href="../er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.html">
+            
+                    
+                    1.加载Kernel和用户程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.html">
+            
+                <a href="../er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.html">
+            
+                    
+                    2.真正的Kernel运行了！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/">
+            
+                <a href="../er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/">
+            
+                    
+                    3.进行Kernel初始化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.html">
+            
+                <a href="../er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.html">
+            
+                    
+                    初始化IDT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.html">
+            
+                <a href="../er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.html">
+            
+                    
+                    其余的初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.html">
+            
+                <a href="../er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.html">
+            
+                    
+                    4.完善中断处理部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.html">
+            
+                <a href="../er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.html">
+            
+                    
+                    5.完善库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.html">
+            
+                <a href="../er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.html">
+            
+                    
+                    6.加载用户程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../san-.-zong-jie.html">
+            
+                <a href="../san-.-zong-jie.html">
+            
+                    
+                    三.总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/">
+            
+                    
+                    😁 操作系统lab3【左右逢源-调度器】
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/zhi-guan-gan-shou.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/zhi-guan-gan-shou.html">
+            
+                    
+                    直观感受
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/qi-dong-shi-zhong-yuan.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/qi-dong-shi-zhong-yuan.html">
+            
+                    
+                    启动时钟源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/fen-duan-shi-nei-cun-guan-li.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/fen-duan-shi-nei-cun-guan-li.html">
+            
+                    
+                    分段式内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/">
+            
+                    
+                    进程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-kong-zhi-kuai.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-kong-zhi-kuai.html">
+            
+                    
+                    进程控制块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-qie-huan-he-dui-zhan-qie-huan.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-qie-huan-he-dui-zhan-qie-huan.html">
+            
+                    
+                    😭 进程切换和堆栈切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.3" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/nei-he-idle-jin-cheng.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/nei-he-idle-jin-cheng.html">
+            
+                    
+                    内核IDLE进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/xian-cheng.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/xian-cheng.html">
+            
+                    
+                    线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/si-ge-xi-tong-tiao-yong.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/si-ge-xi-tong-tiao-yong.html">
+            
+                    
+                    四个系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/">
+            
+                    
+                    开始Coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/wan-cheng-ku-han-shu.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/wan-cheng-ku-han-shu.html">
+            
+                    
+                    完成库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/shi-zhong-zhong-duan-han-shu.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/shi-zhong-zhong-duan-han-shu.html">
+            
+                    
+                    时钟中断函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/xi-tong-tiao-yong-li-cheng.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/kai-shi-coding/xi-tong-tiao-yong-li-cheng.html">
+            
+                    
+                    系统调用例程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/">
+            
+                    
+                    😂 操作系统lab4【齐心协力-进程通信】
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/xin-hao-liang.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/xin-hao-liang.html">
+            
+                    
+                    信号量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/jing-dian-tong-bu-wen-ti.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/jing-dian-tong-bu-wen-ti.html">
+            
+                    
+                    经典同步问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/xiang-guan-xi-tong-tiao-yong.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/xiang-guan-xi-tong-tiao-yong.html">
+            
+                    
+                    相关系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/">
+            
+                    
+                    开始Coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/shu-ju-jie-gou-bian-hua.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/shu-ju-jie-gou-bian-hua.html">
+            
+                    
+                    数据结构变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/ge-shi-hua-shu-ru.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/ge-shi-hua-shu-ru.html">
+            
+                    
+                    格式化输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/shi-xian-xin-hao-liang.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/shi-xian-xin-hao-liang.html">
+            
+                    
+                    实现信号量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/jie-jue-tong-bu-wen-ti.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin/kai-shi-coding/jie-jue-tong-bu-wen-ti.html">
+            
+                    
+                    解决同步问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/">
+            
+                    
+                    🙂 操作系统lab5【海纳百川-文件系统】
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/wen-jian-xi-tong/">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/wen-jian-xi-tong/">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/wen-jian-xi-tong/shi-mo-shi-wen-jian.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/wen-jian-xi-tong/shi-mo-shi-wen-jian.html">
+            
+                    
+                    什么是文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/wen-jian-xi-tong/wen-jian-cao-zuo.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/wen-jian-xi-tong/wen-jian-cao-zuo.html">
+            
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/">
+            
+                    
+                    开始Coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/shu-ju-jie-gou.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/shu-ju-jie-gou.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/ku-han-shu.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/ku-han-shu.html">
+            
+                    
+                    库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/xie-dai-ma.html">
+            
+                <a href="../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong/kai-shi-coding/xie-dai-ma.html">
+            
+                    
+                    写代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >4.Debug利器-串口输出</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;"><b></b>Debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;</a></li></ul></div><a href="#debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;"><a name="debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;" class="anchor-navigation-ex-anchor" href="#debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>Debug&#x5229;&#x5668;-&#x4E32;&#x53E3;&#x8F93;&#x51FA;</h1>
+<p>&#x76F8;&#x4FE1;&#x5F88;&#x591A;&#x540C;&#x5B66;&#x5728;&#x7F16;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x901A;&#x8FC7;printf&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x8F93;&#x51FA;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x3002;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x505A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5B9E;&#x9A8C;&#xFF0C;&#x8FD8;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;printf&#x7B49;&#x5C4F;&#x5E55;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#xFF08;&#x5B9E;&#x9A8C;&#x7684;&#x5185;&#x5BB9;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x5B9E;&#x73B0;printf&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x5B8C;&#x6210;&#x5B9E;&#x9A8C;&#x4E4B;&#x524D;&#xFF0C;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x7C7B;&#x4F3C;&#x624B;&#x6BB5;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x5462;&#xFF1F;&#x4E0D;&#x8981;&#x614C;&#xFF0C;&#x5728;lab2&#x7684;Makefile&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>play: os.img
+    $(QEMU) -serial stdio os.img
+</code></pre><p>&#x6211;&#x76F8;&#x4FE1;&#x505A;&#x8FC7;lab1&#x7684;&#x540C;&#x5B66;&#x5E94;&#x8BE5;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x641C;&#x7D22;&#x201C;-serial&#x201D;&#x53C2;&#x6570;&#x7684;&#x542B;&#x4E49;&#xFF1A;&#x5176;&#x4E2D;<code>-serial stdio</code>&#x8868;&#x793A;&#x5C06;qemu&#x6A21;&#x62DF;&#x7684;&#x4E32;&#x53E3;&#x6570;&#x636E;&#x5373;&#x65F6;&#x8F93;&#x51FA;&#x5230;stdio&#xFF08;&#x5373;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#xFF09;&#x3002;</p>
+<p>&#x5728;<code>kernel/main.c</code>&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x5C31;&#x662F;&#x521D;&#x59CB;&#x5316;&#x4E32;&#x53E3;&#x8BBE;&#x5907;<code>initSerial()</code>&#xFF0C;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528;<code>putChar&#xFF0C;putStr&#xFF0C;putNum</code>&#xFF08;&#x6211;&#x4EEC;&#x5E2E;&#x4F60;&#x5199;&#x597D;&#x7684;&#xFF0C;&#x5B9A;&#x4E49;&#x5728;<code>kernel/include/device/serial.h</code>&#xFF0C;&#x5B9E;&#x73B0;&#x5728;<code>kernel/kernel/serial.c</code>&#xFF09;&#x7B49;&#x4E32;&#x53E3;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x6216;&#x8F93;&#x51FA;log&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x6846;&#x67B6;&#x4EE3;&#x7801;&#x4E2D;&#x57FA;&#x4E8E;putChar&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x8C03;&#x8BD5;&#x63A5;&#x53E3;<code>assert</code>&#xFF08;&#x5B9A;&#x4E49;&#x5728;<code>kernel/include/common/assert.h</code>)</p>
+<p>&#x6709;&#x5174;&#x8DA3;&#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x5BF9;<code>putChar</code>&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF0C;<strong>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;printf&#x7684;&#x4E32;&#x53E3;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;<code>sprintf&#xFF08;&#x4E0D;&#x505A;&#x8981;&#x6C42;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x4F60;&#x81EA;&#x5DF1;debug&#x65B9;&#x4FBF;&#x54C8;&#x54C8;&#xFF09;</code></strong>&#x3002;:joy:</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.-zhong-duan/xi-tong-tiao-yong.html" class="navigation navigation-prev " aria-label="Previous page: 系统调用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../er-.-kai-shi-coding/" class="navigation navigation-next " aria-label="Next page: 二.开始Coding">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.Debug利器-串口输出","level":"1.2.1.4","depth":3,"next":{"title":"二.开始Coding","level":"1.2.2","depth":2,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/README.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/README.md","articles":[{"title":"1.加载Kernel和用户程序","level":"1.2.2.1","depth":3,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.md","articles":[]},{"title":"2.真正的Kernel运行了！","level":"1.2.2.2","depth":3,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.md","articles":[]},{"title":"3.进行Kernel初始化","level":"1.2.2.3","depth":3,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/README.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/README.md","articles":[{"title":"初始化IDT","level":"1.2.2.3.1","depth":4,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.md","articles":[]},{"title":"其余的初始化","level":"1.2.2.3.2","depth":4,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.md","articles":[]}]},{"title":"4.完善中断处理部分","level":"1.2.2.4","depth":3,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.md","articles":[]},{"title":"5.完善库函数","level":"1.2.2.5","depth":3,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.md","articles":[]},{"title":"6.加载用户程序","level":"1.2.2.6","depth":3,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.md","articles":[]}]},"previous":{"title":"系统调用","level":"1.2.1.3.3","depth":4,"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/xi-tong-tiao-yong.md","ref":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/xi-tong-tiao-yong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-livereload","github","chart","todo","graph","puml","katex","code","ace","flexible-alerts","chapter-fold","anchor-navigation-ex","theme-comscore","hints","pageview-count","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ace":{},"github":{"url":"https://github.com/changanyyy/os"},"puml":{},"todo":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"code":{"copyButtons":true},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"pageview-count":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"edit-link":{"base":"https://github.com/NJU-CS/os","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"}},"theme":"default","author":"yxz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lab manual for OS 2022 spring","language":"zh-hans","gitbook":"*"},"file":{"path":"cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/4.debug-li-qi-chuan-kou-shu-chu.md","mtime":"2022-08-18T04:32:57.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-18T04:42:13.223Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
