@@ -1,0 +1,1778 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Jin Cheng Kong Zhi Kuai · lab manual for OS 2022 spring</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yxz">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="jin-cheng-qie-huan-he-dui-zhan-qie-huan.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <script src="../../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    
+    <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Cao Zuo Xi Tong Lab 1 Ru He Qi Dong Yi Ge Os
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/">
+            
+                    
+                    Bi Bei De Gong Ju
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/git-guan-li-xiang-mu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/git-guan-li-xiang-mu.html">
+            
+                    
+                    Git Guan Li Xiang Mu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.html">
+            
+                    
+                    Le Jie X 86 Hui Bian Wen Jian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/qemu+gdb.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/bi-bei-de-gong-ju/qemu+gdb.html">
+            
+                    
+                    Qemu Gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/">
+            
+                    
+                    Ji Chu Zhi Shi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/">
+            
+                    
+                    Kai Ji De Di Yi Tiao Zhi Ling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.html">
+            
+                    
+                    Yi Ge Xiao Shi Yan
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab1-ru-he-qi-dong-yi-ge-os/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.html">
+            
+                    
+                    Ji Suan Ji De Wu Li Di Zhi Kong Jian
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/">
+            
+                    
+                    Cao Zuo Xi Tong Lab 2 Er Ting Ba Fang Zhong Duan Ji Zhi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/">
+            
+                    
+                    er-.-kai-shi-coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/">
+            
+                    
+                    3.-jin-hang-kernel-chu-shi-hua
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.html">
+            
+                    
+                    Chu Shi Hua Idt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.html">
+            
+                    
+                    Qi Yu De Chu Shi Hua
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.html">
+            
+                    
+                    1.-jia-zai-kernel-he-yong-hu-cheng-xu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.html">
+            
+                    
+                    2.-zhen-zheng-de-kernel-yun-hang-le
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.html">
+            
+                    
+                    4.-wan-shan-zhong-duan-chu-li-bu-fen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.html">
+            
+                    
+                    5.-wan-shan-ku-han-shu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.html">
+            
+                    
+                    6.-jia-zai-yong-hu-cheng-xu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/">
+            
+                    
+                    yi-.-ji-chu-zhi-shi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/">
+            
+                    
+                    1.-jia-zai-kernel-he-yong-hu-cheng-xu
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/ci-pan-du-xie.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/ci-pan-du-xie.html">
+            
+                    
+                    Ci Pan Du Xie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/jia-zai-elf.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/jia-zai-elf.html">
+            
+                    
+                    Jia Zai Elf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/">
+            
+                    
+                    2.-nei-he-tai-yong-hu-tai
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.2.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/te-quan-ji.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/te-quan-ji.html">
+            
+                    
+                    Te Quan Ji
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/">
+            
+                    
+                    3.-zhong-duan
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/">
+            
+                    
+                    Ia 32 Zhong Duan Ji Zhi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1.1" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/idt-zhong-duan-miao-shu-fu-biao.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/idt-zhong-duan-miao-shu-fu-biao.html">
+            
+                    
+                    Idt Zhong Duan Miao Shu Fu Biao
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.1.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-shi-de-qie-huan.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-shi-de-qie-huan.html">
+            
+                    
+                    Zhong Duan Shi De Qie Huan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.1.3" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-xiang-liang.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-xiang-liang.html">
+            
+                    
+                    Zhong Duan Xiang Liang
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/wai-bu-zhong-duan.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/wai-bu-zhong-duan.html">
+            
+                    
+                    Wai Bu Zhong Duan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.3" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/xi-tong-tiao-yong.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/3.-zhong-duan/xi-tong-tiao-yong.html">
+            
+                    
+                    Xi Tong Tiao Yong
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/4.debug-li-qi-chuan-kou-shu-chu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/yi-.-ji-chu-zhi-shi/4.debug-li-qi-chuan-kou-shu-chu.html">
+            
+                    
+                    4.debug-li-qi-chuan-kou-shu-chu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/san-.-zong-jie.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-er-ting-ba-fang-zhong-duan-ji-zhi/san-.-zong-jie.html">
+            
+                    
+                    san-.-zong-jie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/">
+            
+                    
+                    Cao Zuo Xi Tong Lab 2 Gei Os Gan Shou He Fan Ying De Neng Li
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/">
+            
+                    
+                    er-.-kai-shi-coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/">
+            
+                    
+                    3.-jin-hang-kernel-chu-shi-hua
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/chu-shi-hua-idt.html">
+            
+                    
+                    Chu Shi Hua Idt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/3.-jin-hang-kernel-chu-shi-hua/qi-yu-de-chu-shi-hua.html">
+            
+                    
+                    Qi Yu De Chu Shi Hua
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/1.-jia-zai-kernel-he-yong-hu-cheng-xu.html">
+            
+                    
+                    1.-jia-zai-kernel-he-yong-hu-cheng-xu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/2.-zhen-zheng-de-kernel-yun-hang-le.html">
+            
+                    
+                    2.-zhen-zheng-de-kernel-yun-hang-le
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/4.-wan-shan-zhong-duan-chu-li-bu-fen.html">
+            
+                    
+                    4.-wan-shan-zhong-duan-chu-li-bu-fen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/5.-wan-shan-ku-han-shu.html">
+            
+                    
+                    5.-wan-shan-ku-han-shu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/er-.-kai-shi-coding/6.-jia-zai-yong-hu-cheng-xu.html">
+            
+                    
+                    6.-jia-zai-yong-hu-cheng-xu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/">
+            
+                    
+                    yi-.-ji-chu-zhi-shi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/">
+            
+                    
+                    1.-jia-zai-kernel-he-yong-hu-cheng-xu
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/ci-pan-du-xie.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/ci-pan-du-xie.html">
+            
+                    
+                    Ci Pan Du Xie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/jia-zai-elf.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/1.-jia-zai-kernel-he-yong-hu-cheng-xu/jia-zai-elf.html">
+            
+                    
+                    Jia Zai Elf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/">
+            
+                    
+                    2.-nei-he-tai-yong-hu-tai
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/te-quan-ji.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/2.-nei-he-tai-yong-hu-tai/te-quan-ji.html">
+            
+                    
+                    Te Quan Ji
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/">
+            
+                    
+                    3.-zhong-duan
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/">
+            
+                    
+                    Ia 32 Zhong Duan Ji Zhi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1.1" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/idt-zhong-duan-miao-shu-fu-biao.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/idt-zhong-duan-miao-shu-fu-biao.html">
+            
+                    
+                    Idt Zhong Duan Miao Shu Fu Biao
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-shi-de-qie-huan.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-shi-de-qie-huan.html">
+            
+                    
+                    Zhong Duan Shi De Qie Huan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.3" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-xiang-liang.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/ia32-zhong-duan-ji-zhi/zhong-duan-xiang-liang.html">
+            
+                    
+                    Zhong Duan Xiang Liang
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.2" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/wai-bu-zhong-duan.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/wai-bu-zhong-duan.html">
+            
+                    
+                    Wai Bu Zhong Duan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.3" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/xi-tong-tiao-yong.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/3.-zhong-duan/xi-tong-tiao-yong.html">
+            
+                    
+                    Xi Tong Tiao Yong
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/4.debug-li-qi-chuan-kou-shu-chu.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/yi-.-ji-chu-zhi-shi/4.debug-li-qi-chuan-kou-shu-chu.html">
+            
+                    
+                    4.debug-li-qi-chuan-kou-shu-chu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/san-.-zong-jie.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab2-gei-os-gan-shou-he-fan-ying-de-neng-li/san-.-zong-jie.html">
+            
+                    
+                    san-.-zong-jie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Cao Zuo Xi Tong Lab 3 Zuo You Feng Yuan Tiao Du Qi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Ji Chu Zhi Shi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Jin Cheng
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1.1.1" data-path="jin-cheng-kong-zhi-kuai.html">
+            
+                <a href="jin-cheng-kong-zhi-kuai.html">
+            
+                    
+                    Jin Cheng Kong Zhi Kuai
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.2" data-path="jin-cheng-qie-huan-he-dui-zhan-qie-huan.html">
+            
+                <a href="jin-cheng-qie-huan-he-dui-zhan-qie-huan.html">
+            
+                    
+                    Jin Cheng Qie Huan He Dui Zhan Qie Huan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.1.3" data-path="nei-he-idle-jin-cheng.html">
+            
+                <a href="nei-he-idle-jin-cheng.html">
+            
+                    
+                    Nei He Idle Jin Cheng
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../fen-duan-shi-nei-cun-guan-li.html">
+            
+                <a href="../fen-duan-shi-nei-cun-guan-li.html">
+            
+                    
+                    Fen Duan Shi Nei Cun Guan Li
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../qi-dong-shi-zhong-yuan.html">
+            
+                <a href="../qi-dong-shi-zhong-yuan.html">
+            
+                    
+                    Qi Dong Shi Zhong Yuan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../si-ge-xi-tong-tiao-yong.html">
+            
+                <a href="../si-ge-xi-tong-tiao-yong.html">
+            
+                    
+                    Si Ge Xi Tong Tiao Yong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../xian-cheng.html">
+            
+                <a href="../xian-cheng.html">
+            
+                    
+                    Xian Cheng
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../kai-shi-coding/">
+            
+                <a href="../../kai-shi-coding/">
+            
+                    
+                    Kai Shi Coding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../kai-shi-coding/shi-zhong-zhong-duan-han-shu.html">
+            
+                <a href="../../kai-shi-coding/shi-zhong-zhong-duan-han-shu.html">
+            
+                    
+                    Shi Zhong Zhong Duan Han Shu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../kai-shi-coding/wan-cheng-ku-han-shu.html">
+            
+                <a href="../../kai-shi-coding/wan-cheng-ku-han-shu.html">
+            
+                    
+                    Wan Cheng Ku Han Shu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../kai-shi-coding/xi-tong-tiao-yong-li-cheng.html">
+            
+                <a href="../../kai-shi-coding/xi-tong-tiao-yong-li-cheng.html">
+            
+                    
+                    Xi Tong Tiao Yong Li Cheng
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../zhi-guan-gan-shou.html">
+            
+                <a href="../../zhi-guan-gan-shou.html">
+            
+                    
+                    Zhi Guan Gan Shou
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab4-qi-xin-xie-li-jin-cheng-tong-xin.html">
+            
+                    
+                    Cao Zuo Xi Tong Lab 4 Qi Xin Xie Li Jin Cheng Tong Xin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong.html">
+            
+                <a href="../../../cao-zuo-xi-tong-lab5-hai-na-bai-chuan-wen-jian-xi-tong.html">
+            
+                    
+                    Cao Zuo Xi Tong Lab 5 Hai Na Bai Chuan Wen Jian Xi Tong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../readme/bi-bei-de-gong-ju/">
+            
+                <a href="../../../readme/bi-bei-de-gong-ju/">
+            
+                    
+                    Bi Bei De Gong Ju
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../../readme/bi-bei-de-gong-ju/git-guan-li-xiang-mu.html">
+            
+                <a href="../../../readme/bi-bei-de-gong-ju/git-guan-li-xiang-mu.html">
+            
+                    
+                    Git Guan Li Xiang Mu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../../readme/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.html">
+            
+                <a href="../../../readme/bi-bei-de-gong-ju/le-jie-x86-hui-bian-wen-jian.html">
+            
+                    
+                    Le Jie X 86 Hui Bian Wen Jian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../../readme/bi-bei-de-gong-ju/qemu+gdb.html">
+            
+                <a href="../../../readme/bi-bei-de-gong-ju/qemu+gdb.html">
+            
+                    
+                    Qemu Gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../../readme/ji-chu-zhi-shi/">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/">
+            
+                    
+                    Ji Chu Zhi Shi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/">
+            
+                    
+                    Ia 32 De Cun Chu Guan Li
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1.1" data-path="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/bao-hu-mo-shi.html">
+            
+                    
+                    Bao Hu Mo Shi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.1.2" data-path="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/cong-shi-mo-shi-qie-huan-dao-bao-hu-mo-shi.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/cong-shi-mo-shi-qie-huan-dao-bao-hu-mo-shi.html">
+            
+                    
+                    Cong Shi Mo Shi Qie Huan Dao Bao Hu Mo Shi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.1.3" data-path="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/shi-mo-shi.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/ia32-de-cun-chu-guan-li/shi-mo-shi.html">
+            
+                    
+                    Shi Mo Shi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/">
+            
+                    
+                    Kai Ji De Di Yi Tiao Zhi Ling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.2.1" data-path="../../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/kai-ji-cheng-gong.html">
+            
+                    
+                    Kai Ji Cheng Gong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2.2" data-path="../../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/kai-ji-de-di-yi-tiao-zhi-ling/yi-ge-xiao-shi-yan.html">
+            
+                    
+                    Yi Ge Xiao Shi Yan
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="../../../readme/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/ji-suan-ji-de-wu-li-di-zhi-kong-jian.html">
+            
+                    
+                    Ji Suan Ji De Wu Li Di Zhi Kong Jian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" data-path="../../../readme/ji-chu-zhi-shi/mbr-and-bootloader.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/mbr-and-bootloader.html">
+            
+                    
+                    Mbr And Bootloader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" data-path="../../../readme/ji-chu-zhi-shi/xian-cun-guan-li.html">
+            
+                <a href="../../../readme/ji-chu-zhi-shi/xian-cun-guan-li.html">
+            
+                    
+                    Xian Cun Guan Li
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../../readme/kai-shi-shi-yan/">
+            
+                <a href="../../../readme/kai-shi-shi-yan/">
+            
+                    
+                    Kai Shi Shi Yan
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/">
+            
+                <a href="../../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/">
+            
+                    
+                    Jia Zai Zhen Zheng De Cao Zuo Xi Tong
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1.1" data-path="../../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/jia-zai-os.html">
+            
+                <a href="../../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/jia-zai-os.html">
+            
+                    
+                    Jia Zai Os
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.1.2" data-path="../../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/kai-qi-bao-hu-mo-shi.html">
+            
+                <a href="../../../readme/kai-shi-shi-yan/jia-zai-zhen-zheng-de-cao-zuo-xi-tong/kai-qi-bao-hu-mo-shi.html">
+            
+                    
+                    Kai Qi Bao Hu Mo Shi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/">
+            
+                <a href="../../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/">
+            
+                    
+                    Xie Yi Ge Zi Ji De Mbr
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.2.1" data-path="../../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.html">
+            
+                <a href="../../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/cao-zuo-yi-bo.html">
+            
+                    
+                    Cao Zuo Yi Bo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2.2" data-path="../../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/fen-xi-yi-xia.html">
+            
+                <a href="../../../readme/kai-shi-shi-yan/xie-yi-ge-zi-ji-de-mbr/fen-xi-yi-xia.html">
+            
+                    
+                    Fen Xi Yi Xia
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Jin Cheng Kong Zhi Kuai</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;"><b></b>&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7ED3;&#x6784;"><b></b>&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7ED3;&#x6784;"><b></b>&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li><ul><li><span class="title-icon "></span><a href="#pcb&#x6570;&#x7EC4;"><b></b>PCB&#x6570;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x4E8E;&#x7BA1;&#x7406;&#x7A7A;&#x95F2;&#x8FDB;&#x7A0B;"><b></b>&#x5173;&#x4E8E;&#x7BA1;&#x7406;&#x7A7A;&#x95F2;&#x8FDB;&#x7A0B;</a></li></ul></ul></ul></div><a href="#&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;"><a name="&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;</h1>
+<h2 id="&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="&#x6570;&#x636E;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<p>&#x5728;&#x672C;&#x8BFE;&#x7A0B;&#x548C;&#x5176;&#x5B83;&#x8BFE;&#x7A0B;&#x4E2D;&#xFF0C;&#x5927;&#x5BB6;&#x5E94;&#x8BE5;&#x5BF9;&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;&#xFF08;Process Control Block&#xFF0C;PCB&#xFF09;&#x6709;&#x4E86;&#x4E00;&#x5B9A;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x5B9E;&#x9A8C;3&#x5F00;&#x59CB;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x5BF9;&#x591A;&#x8FDB;&#x7A0B;&#x7684;&#x652F; &#x6301;&#xFF0C;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;lab3&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;&#x3002;</p>
+<pre><code>struct ProcessTable {
+    uint32_t stack[MAX_STACK_SIZE]; //&#x5185;&#x6838;&#x5806;&#x6808;
+    struct StackFrame regs;        //&#x9677;&#x9631;&#x5E27;&#xFF0C;&#x4FDD;&#x5B58;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;
+    uint32_t stackTop;        //&#x6808;&#x9876;&#x4FE1;&#x606F;
+    uint32_t prevStackTop;        //&#x5D4C;&#x5957;&#x65F6;&#x4FDD;&#x5B58;&#x5F85;&#x6062;&#x590D;&#x7684;&#x6808;&#x9876;&#x4FE1;&#x606F;
+    int state;            //&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x662F;&#x4E0A;&#x4E00;&#x8282;&#x63D0;&#x5230;&#x7684;
+    int timeCount;            //&#x65F6;&#x95F4;&#x7247;
+    int sleepTime;            //&#x9700;&#x8981;&#x963B;&#x585E;&#x7684;&#x65F6;&#x95F4;
+    uint32_t pid;            //&#x8FDB;&#x7A0B;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x8FDB;&#x7A0B;&#x53F7;
+    char name[32];            //&#x6682;&#x65F6;&#x7528;&#x4E0D;&#x5230;
+};
+</code></pre><p>&#x5BF9;&#x4E8E;&#x5B9E;&#x9A8C;&#x4E8C;&#x7684;TrapFrame&#xFF0C;&#x6211;&#x4EEC;&#x53D8;&#x6210;&#x4E86;StackFrame&#x3002;</p>
+<pre><code>struct TrapFrame {
+    uint32_t gs, fs, es, ds;
+    uint32_t edi, esi, ebp, xxx, ebx, edx, ecx, eax;
+    uint32_t irq, error;
+    uint32_t eip, cs, eflags, esp, ss;
+};
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;StackFrame&#x4FDD;&#x5B58;&#x4E86;&#x9677;&#x5165;&#x4E2D;&#x65AD;&#x4E4B;&#x524D;&#x7A0B;&#x5E8F;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x4E3B;&#x8981;&#x662F;&#x786C;&#x4EF6;&#x4FDD;&#x5B58;&#x7684;&#x5185;&#x5BB9;&#xFF09;&#x3002;</p>
+<h2 id="&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x7EC7;&#x6570;&#x636E;&#x7ED3;&#x6784;</h2>
+<h3 id="pcb&#x6570;&#x7EC4;"><a name="pcb&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#pcb&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>PCB&#x6570;&#x7EC4;</h3>
+<p>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;PCB&#x3002;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x7EC4;&#x7EC7;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1F;</p>
+<p>&#x4E3A;&#x4E86;&#x5FEB;&#x901F;&#x8BBF;&#x95EE;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x8BBE;&#x7F6E;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>struct ProcessTable pcb[MAX_PCB_NUM];
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;PID&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#xFF0C;&#x7528;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x5FEB;&#x901F;&#x8BBF;&#x95EE;&#x76F8;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x63A7;&#x5236;&#x5757;&#x3002;&#x5185;&#x6838;&#x8FDB;&#x7A0B;&#x4F1A;&#x5360;&#x636E;0&#x53F7;pcb&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5206;&#x914D;&#x7ED9;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x3002;&#x540C;&#x6837;&#x4E3A;&#x4E86;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x9ED8;&#x8BA4;&#x6BCF;&#x4E2A;pcb &#x5BF9;&#x5E94;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x56FA;&#x5B9A;&#xFF0C; pcb[i] &#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x5185;&#x5B58;&#x8D77;&#x59CB;&#x5730;&#x5740;&#x4E3A; (i + 1) * 0x100000 &#xFF0C;&#x5927;&#x5C0F;&#x4E3A; 0x100000</p>
+<h3 id="&#x5173;&#x4E8E;&#x7BA1;&#x7406;&#x7A7A;&#x95F2;&#x8FDB;&#x7A0B;"><a name="&#x5173;&#x4E8E;&#x7BA1;&#x7406;&#x7A7A;&#x95F2;&#x8FDB;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x4E8E;&#x7BA1;&#x7406;&#x7A7A;&#x95F2;&#x8FDB;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x4E8E;&#x7BA1;&#x7406;&#x7A7A;&#x95F2;&#x8FDB;&#x7A0B;</h3>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>exercise3&#xFF1A;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#x9884;&#x7559;&#x4E86;100&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x4E2D;&#x8FD0;&#x884C;&#x4E86;50&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x5176;&#x4E2D;&#x67D0;&#x4E9B;&#x7ED3;&#x675F;&#x4E86;&#x8FD0;&#x884C;&#x3002;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x53C8;&#x6709;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x60F3;&#x8981;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#xFF08;&#x5373;&#x9700;&#x8981;&#x5206;&#x914D;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;PCB&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x80FD;&#x591F;&#x4EE5;O(1)&#x7684;&#x65F6;&#x95F4;&#x548C;O(n)&#x7684;&#x7A7A;&#x95F4;&#x5FEB;&#x901F;&#x5730;&#x627E;&#x5230;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;PCB&#x5462;&#xFF1F; </p>
+</div></div></p>
+<p>&#x4E3A;&#x4E86;&#x56DE;&#x7B54;&#x4E0A;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x7684;&#x6734;&#x7D20;&#x505A;&#x6CD5;&#x3002;</p>
+<pre><code>for(int i = 0; i &lt; MAX_PCB_NUM; i++){
+    if(pcb[i]&#x7A7A;&#x95F2;){
+        &#x628A;pcb[i]&#x5206;&#x914D;&#x7ED9;&#x9700;&#x8981;&#x7684;&#x8FDB;&#x7A0B;;
+        break;
+    }
+}
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Jin Cheng">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="jin-cheng-qie-huan-he-dui-zhan-qie-huan.html" class="navigation navigation-next " aria-label="Next page: Jin Cheng Qie Huan He Dui Zhan Qie Huan">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Jin Cheng Kong Zhi Kuai","level":"1.5.1.1.1","depth":4,"next":{"title":"Jin Cheng Qie Huan He Dui Zhan Qie Huan","level":"1.5.1.1.2","depth":4,"path":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-qie-huan-he-dui-zhan-qie-huan.md","ref":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-qie-huan-he-dui-zhan-qie-huan.md","articles":[]},"previous":{"title":"Jin Cheng","level":"1.5.1.1","depth":3,"path":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/README.md","ref":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/README.md","articles":[{"title":"Jin Cheng Kong Zhi Kuai","level":"1.5.1.1.1","depth":4,"path":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-kong-zhi-kuai.md","ref":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-kong-zhi-kuai.md","articles":[]},{"title":"Jin Cheng Qie Huan He Dui Zhan Qie Huan","level":"1.5.1.1.2","depth":4,"path":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-qie-huan-he-dui-zhan-qie-huan.md","ref":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-qie-huan-he-dui-zhan-qie-huan.md","articles":[]},{"title":"Nei He Idle Jin Cheng","level":"1.5.1.1.3","depth":4,"path":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/nei-he-idle-jin-cheng.md","ref":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/nei-he-idle-jin-cheng.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-livereload","github","chart","todo","graph","puml","katex","code","ace","flexible-alerts","chapter-fold","anchor-navigation-ex","theme-comscore","hints","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"ace":{},"github":{"url":"https://github.com/changanyyy/os"},"puml":{},"todo":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"code":{"copyButtons":true},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"pageview-count":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"edit-link":{"base":"https://github.com/NJU-CS/os","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"}},"theme":"default","author":"yxz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lab manual for OS 2022 spring","language":"zh-hans","gitbook":"*"},"file":{"path":"cao-zuo-xi-tong-lab3-zuo-you-feng-yuan-tiao-du-qi/ji-chu-zhi-shi/jin-cheng/jin-cheng-kong-zhi-kuai.md","mtime":"2022-08-18T05:29:09.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-18T05:30:07.660Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
