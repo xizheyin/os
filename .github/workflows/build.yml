@@ -47,10 +47,3 @@ jobs:
         git commit -m "Updated By Github Actions With Build ${{github.run_number}} of ${{github.workflow}} For Github Pages"
         git branch -M main
         git push --force --quiet "https://${TOKEN}@${REF}" main:gh-pages
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-hint
