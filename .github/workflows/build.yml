@@ -1,3 +1,8 @@
+name: 'deploy in GitHub Pages'
+on:
+  push:
+    branches:
+      - main  # trigger branch
 jobs:
   build:
     name: Build Gitbook
