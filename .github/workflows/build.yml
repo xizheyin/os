@@ -1,5 +1,5 @@
 name: 'deploy in GitHub Pages'
-on:
+on: 
   push:
     branches:
       - main  # trigger branch
