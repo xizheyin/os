@@ -16,6 +16,8 @@ jobs:
             
     - name: install nodejs
       uses: actions/setup-node@v3
+      with:
+        node-version: 10
       
     - name: configue gitbook
       run: |
